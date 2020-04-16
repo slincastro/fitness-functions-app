@@ -1,2 +1,2 @@
 worker: yarn run build --yes
-web: node ./index.js
+web: node ./index.html
