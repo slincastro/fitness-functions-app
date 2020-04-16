@@ -35,9 +35,9 @@ workflows:
     jobs:
       - build
       - heroku/deploy-via-git:
-        filters:
-          branches:
-            only: master
-        depends:
-          - build
+          filters:
+            branches:
+              only: master
+          depends:
+            - build
       
