@@ -38,6 +38,6 @@ workflows:
           filters:
             branches:
               only: master
-          depends:
+          requires:
             - build
       
