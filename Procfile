@@ -1,1 +1,2 @@
-web: yarn run build --yes
+worker: yarn run build --yes
+web: web: node ./index.js
