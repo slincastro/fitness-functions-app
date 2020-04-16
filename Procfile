@@ -1,2 +1,2 @@
 web: yarn run build --yes
-web: node .public/index.html
+web: node /build/public/index.html
