@@ -29,6 +29,9 @@ jobs:
           path: test-results
       - store_test_results:
           path: test-results
+      - package:
+          name: Package Application
+          command: npm run eject
 
 workflows:
   Build and Test:
