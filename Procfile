@@ -1,3 +1,2 @@
-worker: yarn run build --yes
-worker : ls
-web: node ./index.html
+web: yarn run build --yes
+web: node .public/index.html
