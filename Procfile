@@ -1,1 +1,1 @@
-web: yarn run eject
+web: yarn run build
