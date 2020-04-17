@@ -25,12 +25,13 @@ jobs:
           name: Run tests
           # Runs jest with "--maxWorkers=2" argument to avoid OOM issues
           command: npm test # replace with `yarn test` if using yarn
+      - run:
+          name: Package Application
+          command: yarn run build --yes
       - store_artifacts: 
           path: test-results
       - store_test_results:
           path: test-results
-      - package:
-          command: yarn run build --yes
 
 workflows:
   Build and Test:
