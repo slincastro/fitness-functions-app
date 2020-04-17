@@ -42,10 +42,8 @@ jobs:
            name: Deploy Master to Heroku
            command: |
               cd /tmp/app
+              curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
               heroku -v
-              git init
-              git add .
-              git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
 
 
 workflows:
