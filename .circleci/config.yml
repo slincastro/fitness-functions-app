@@ -43,6 +43,7 @@ jobs:
            name: Deploy Master to Heroku
            command: |
               cd /tmp/app
+              git config --global user.name "CircleCI"
               git init
               git add .
               git commit -m "Deploy"
