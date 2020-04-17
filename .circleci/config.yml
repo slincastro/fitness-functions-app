@@ -32,7 +32,7 @@ jobs:
             ls
             mkdir -p /tmp/app
             ls -la
-            cp -R build /tmp/app
+            cp -avR /build/* /tmp/app
       - store_artifacts: 
           path: test-results
       - store_test_results:
