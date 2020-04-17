@@ -31,7 +31,7 @@ jobs:
             yarn run build --yes
             ls
             mkdir -p /tmp/app
-            cp build/ /tmp/app
+            cp /build /tmp/app
       - store_artifacts: 
           path: test-results
       - store_test_results:
