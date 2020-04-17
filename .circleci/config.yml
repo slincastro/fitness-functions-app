@@ -46,6 +46,7 @@ jobs:
               curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
               git init
               git add .
+              git config --global user.name "Test Name"
               git commit -m "Deploy"
               git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
 
