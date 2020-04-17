@@ -28,9 +28,7 @@ jobs:
           name: Package Application
           command: |
             yarn run build --yes
-            ls
             mkdir -p /tmp/app
-            ls -la
             cp -avR build/* /tmp/app
             cp Procfile /tmp/app
             cp .circleci/server.js /tmp/app
@@ -45,7 +43,6 @@ jobs:
            name: Deploy Master to Heroku
            command: |
               cd /tmp/app
-              curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
               yarn install
               git init
               git add .
