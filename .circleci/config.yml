@@ -29,6 +29,8 @@ jobs:
           path: test-results
       - store_test_results:
           path: test-results
+      - package:
+          command: yarn run build --yes
 
 workflows:
   Build and Test:
