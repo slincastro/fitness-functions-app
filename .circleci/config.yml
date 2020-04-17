@@ -27,11 +27,17 @@ jobs:
           command: npm test # replace with `yarn test` if using yarn
       - run:
           name: Package Application
-          command: yarn run build --yes
+          command: |
+            yarn run build --yes
+            ls
+            mkdir -p /tmp/app
+            cp build/ /tmp/app
       - store_artifacts: 
           path: test-results
       - store_test_results:
           path: test-results
+      - store_artifacts:
+          path: /tmp/app
 
 workflows:
   Build and Test:
