@@ -33,6 +33,7 @@ jobs:
             ls -la
             cp -avR build/* /tmp/app
             cp Procfile /tmp/app
+            cd .circleci/server.js /tmp/app
       - store_artifacts: 
           path: test-results
       - store_test_results:
