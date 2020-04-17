@@ -38,6 +38,12 @@ jobs:
           path: test-results
       - store_artifacts:
           path: /tmp/app
+      - run:
+           name: Deploy Master to Heroku
+           command: |
+              cd /tmp/app
+              git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
+
 
 workflows:
   Build and Test:
