@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  dev:
+    build:
+      context: ./infra/node
+      dockerfile: Dockerfile
+    container_name: fitness-functions
+    entrypoint: sh ./infra/entrypoint.sh
+    working_dir: /home/node
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/home/node
