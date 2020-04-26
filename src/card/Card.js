@@ -19,7 +19,7 @@ class Card extends React.Component {
 
 const CardList = (props) => (
   <div>
-    {props.profiles.map(profiles => <Card {...profiles}/>)}
+    {props.profiles.map(profile => <Card key={profile.id} {...profile}/>)}
   </div>
   )
 
